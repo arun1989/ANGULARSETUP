@@ -1,0 +1,174 @@
+<nav class="navbar navbar-expand-xl">
+    <div class="container">
+        <a class="navbar-brand text-white fw-700" href="#">ZenduForms</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ZenduForms</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item mb-2 mb-xl-0 me-xl-3">
+                        <a class="nav-link text-white" href="#"><img src="assets/images/format_list_bulleted.svg" alt=""
+                                class="img-fluid"> Forms</a>
+                    </li>
+                    <li class="nav-item mb-2 mb-xl-0 mx-xl-3">
+                        <a class="nav-link text-white" href="#"><img src="assets/images/people.svg" alt=""
+                                class="img-fluid">
+                            Customers</a>
+                    </li>
+                    <li class="nav-item mb-2 mb-xl-0 mx-xl-3">
+                        <a class="nav-link text-white active" href="#"><img src="assets/images/graphic_eq.svg" alt=""
+                                class="img-fluid">
+                            Submissions</a>
+                    </li>
+                    <li class="nav-item mb-2 mb-xl-0 mx-xl-3">
+                        <a class="nav-link text-white" href="#"><img src="assets/images/history.svg" alt=""
+                                class="img-fluid">
+                            History</a>
+                    </li>
+
+                    <li class="nav-item mb-2 mb-xl-0 mx-xl-3">
+                        <a class="nav-link text-white" href="#"><img src="assets/images/insert_chart_outlined.svg"
+                                alt="" class="img-fluid"> Reports</a>
+                    </li>
+                    <li class="nav-item mb-2 mb-xl-0 mx-xl-3">
+                        <a class="nav-link text-white" href="#"><img src="assets/images/insert_chart_outlined.svg"
+                                alt="" class="img-fluid"> Workflow</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item mb-2 mb-xl-0 me-3">
+                        <a class="nav-link text-white" href="#"><img src="assets/images/notifications.svg" alt=""
+                                class="img-fluid"></a>
+                    </li>
+                    <li class="nav-item mb-2 mb-xl-0">
+                        <a class="nav-link text-white" href="#"><img src="assets/images/logout.svg" alt=""
+                                class="img-fluid"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-4 mb-0">
+                <div class="main-heading">
+                    <h2>Submissions</h2>
+                </div>
+            </div>
+            <div class="col-12 mb-2">
+                <div class="d-lg-flex justify-content-between align-items-center">
+                    <div class="d-md-flex align-items-center">
+                        <div class="search-box me-md-3 my-3 position-relative">
+                            <input type="text" placeholder="Search..." class="form-control">
+                            <img src="assets/images/search.svg" alt="" class="img-fluid position-absolute">
+                        </div>
+                        <div class="select-box me-md-3 my-3">
+                            <select class="form-select">
+                                <option selected>Select Form</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="select-status me-md-3 my-3">
+                            <select class="form-select">
+                                <option selected>Select Status</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="date">
+                            <input type="date" class="form-control">
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-lg-start justify-content-between">
+                        <div class="nav-tabss me-3 my-3">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="map-tab" data-bs-toggle="tab"
+                                        data-bs-target="#map-tab-pane" type="button" role="tab"
+                                        aria-controls="map-tab-pane" aria-selected="true">Map</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="list-tab" data-bs-toggle="tab"
+                                        data-bs-target="#list-tab-pane" type="button" role="tab"
+                                        aria-controls="list-tab-pane" aria-selected="false">List</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="export-btn my-3">
+                            <button class="primary-color bg-white border-0 fw-500"><img
+                                    src="assets/images/paper-download.svg" alt="" class="img-fluid">
+                                Export</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="map-tab-pane" role="tabpanel" aria-labelledby="map-tab"
+                        tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-4 mb-4">
+                                <div class="row overflow-auto height-vh">
+                                    <div class="col-12 mb-3" *ngFor="let data of records">
+                                        <div class="submission-item p-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h5 class="me-3">Work Flow: Requires Location</h5>
+                                                <div class="submission-status d-flex align-items-center uncomplete">
+                                                    <span class="red me-2"></span> {{data.status}}
+                                                </div>
+                                            </div>
+                                            <div class="from-mail">
+                                                <p class="mb-1"><span>From :</span> {{data.fromEmail}}</p>
+                                            </div>
+                                            <div class="to-mail">
+                                                <p class="mb-1"><span>To :</span>{{data.toEmail}}</p>
+                                            </div>
+                                            <div class="due-date">
+                                                <p class="mb-1"><span>Due Date :</span> {{data.DueDate |date: 'MM-dd-yyyy'}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-8 mb-4">
+                                <agm-map id="map" [latitude]="45.5590971" [longitude]="-73.8519573">
+                                    <agm-marker *ngFor="let data of records ; let i = index" [latitude]="data.latLng[1]"
+                                        [longitude]="data.latLng[0]" [iconUrl]="{
+					url: 'assets/images/Group.svg'
+				}" [markerDraggable]="false">
+                                    </agm-marker>
+                                </agm-map>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-tab-pane" role="tabpanel" aria-labelledby="list-tab"
+                        tabindex="0">...</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- [label]="{
+    color: 'red',
+    fontWeight: 'bold',
+    fontSize: '14px',
+    fontFamily: 'nunito',
+    lineHeight: '10px',
+    text: m.label
+}" -->

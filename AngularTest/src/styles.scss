@@ -1,0 +1,313 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary: #2188D9;
+    --white: #ffffff
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    background-color: var(--primary);
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.navbar-brand {
+    font-size: 28px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+}
+.navbar-toggler {
+    color: rgb(255 255 255 / 65%);
+    border: 2px solid rgb(255 255 255);
+}
+.navbar-toggler-icon {
+    filter: brightness(0)invert(1);
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1.45rem 0.5rem;
+}
+
+.navbar-expand-lg .nav-link.nav-link.active {
+    background-color: #1773BB;
+}
+
+.primary-color {
+    color: var(--primary);
+}
+.form-select:focus {
+    box-shadow: 0 0 0 0;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 0;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: var(--white);
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.nav-tabs .nav-link {
+    border: 2px solid #b8b9bc;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    color: black;
+    width: 80px;
+}
+
+#list-tab {
+    border-radius: 0px 4px 4px 0px;
+    border-left: 0px solid !important;
+}
+
+#map-tab {
+    border-radius: 4px 0px 0px 4px;
+    border-right: 0px solid !important;
+}
+
+.submission-item {
+    border: 1px solid #B8B9BC;
+    border-radius: 4px;
+}
+
+.submission-item .uncomplete {
+    background: rgba(255, 61, 0, 0.1);
+    border: 1px solid #FF3D00;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #FF3D00;
+    font-weight: 500;
+    height: 34px;
+    font-size: 14px;
+}
+
+.submission-item .complete {
+    background: #D7E5DA;
+    border: 1px solid #53D86A;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #53D86A;
+    font-weight: 500;
+    height: 34px;
+    font-size: 14px;
+}
+
+.submission-item .need-complete {
+    background: #ECECED;
+    border: 1px solid #B8B9BC;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #B8B9BC;
+    font-weight: 500;
+    height: 34px;
+    font-size: 14px;
+}
+
+.submission-item .complete span.green {
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: #53D86A;
+    border-radius: 50%;
+}
+
+.submission-item h5 {
+    font-size: 18px;
+    width: 60%;
+}
+
+.submission-item .submission-status span.gray {
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: #B8B9BC;
+    border-radius: 50%;
+}
+
+.submission-item .submission-status span.red {
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: #FF3D00;
+    border-radius: 50%;
+}
+
+.submission-item p span {
+    color: #B8B9BC;
+    font-weight: 500;
+}
+
+.due-date p {
+    color: #FF3D00;
+    font-weight: 500;
+}
+
+#myTabContent .height-vh {
+    height: 67vh;
+}
+
+.search-box input {
+    padding: .375rem .75rem .375rem 2rem;
+    min-width: 260px;
+}
+
+.search-box img {
+    top: 10px;
+    left: 10px;
+    max-width: 16px;
+}
+
+.select-box select,
+.select-status select,
+.date input {
+    min-width: 180px;
+}
+
+
+
+
+
+#map {
+    height: 100%;
+    min-height: 300px;
+}
+
+.price-tag {
+    background-color: #4285F4;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.price-tag::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #4285F4;
+}
+
+[class$=api-load-alpha-banner] {
+    display: none;
+}
+
+
+
+
+/* Responsiveness */
+@media screen and (max-width:1400px) {
+    .search-box input {
+        min-width: 220px;
+    }
+
+    .select-box select,
+    .select-status select,
+    .date input {
+        min-width: 160px;
+    }
+
+    .submission-item h5 {
+        width: 55%;
+    }
+    .navbar-expand-xl .navbar-nav .nav-link {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .offcanvas.offcanvas-start {
+        width: 300px;
+    }
+    .search-box input {
+        min-width: 180px;
+        max-width: 180px;
+    }
+    .select-box select, .select-status select, .date input {
+        min-width: 136px;
+    }
+    .nav-tabs .nav-link {
+        width: 64px;
+    }
+    .submission-item .uncomplete {
+        height: 32px;
+        font-size: 12px;
+    }
+    .submission-item .complete {
+        height: 32px;
+        font-size: 12px;
+    }
+    .submission-item .need-complete {
+        height: 32px;
+        font-size: 12px;
+    }
+    .submission-item h5 {
+        width: 50%;
+        font-size: 16px;
+    }
+    .navbar-expand-xl .navbar-nav .nav-link.text-white {
+        color: black !important;
+    }
+    .navbar-expand-xl .navbar-nav .nav-link img {
+        filter: brightness(0)invert(0);
+    }
+    .navbar-expand-xl li.nav-item{
+        border-bottom: 1px solid #dedede;
+    }
+    .navbar-expand-xl li.nav-item:last-child{
+        border-bottom: 0px solid #dedede;
+    }
+    .offcanvas-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .offcanvas-body .flex-grow-1 {
+        flex-grow: 0!important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .search-box input {
+        min-width: auto;
+        max-width: initial;
+    }
+    .select-box select, .select-status select, .date input {
+        min-width: auto;
+    }
+}
+@media screen and (max-width:576px) {
+    #myTabContent .height-vh {
+        height: 90vh;
+    }
+    .navbar-brand {
+        font-size: 24px;
+    }
+    .navbar-toggler {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+    
+}
